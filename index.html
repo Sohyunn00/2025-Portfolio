@@ -8,20 +8,27 @@
     <link rel="stylesheet" href="./css/layout.css" />
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
   </head>
   <body>
     <div class="container">
       <section class="visual1">
         <div class="con">
-          <h2>
-            WEB DESIGNER <br class="mob" />
-            & PUBLISHER <br />
-            PORTFOLIO
-          </h2>
-          <p>- 김소현, 2025, 퍼블리셔 포트폴리오.</p>
-          <div class="bg_img">
-            <img src="./img/visual.jpg" alt="배경 이미지" />
+          <div class="img_box">
+            <h2>
+              WEB DESIGNER <br class="mob" />
+              & PUBLISHER <br />
+              PORTFOLIO
+            </h2>
+            <p>- 김소현, 2025, 퍼블리셔 포트폴리오.</p>
+            <div class="bg_img">
+              <img src="./img/visual.jpg" alt="배경 이미지" />
+            </div>
           </div>
+
+          <div class="blind_top"></div>
+          <div class="blind_bottom"></div>
         </div>
       </section>
       <section class="visual2">
@@ -241,17 +248,25 @@
       </section>
       <section class="contact">
         <div class="con">
-          <h3>@ contact ;</h3>
+          <h3>contact ;</h3>
           <div class="info">
-            <p>★ e-mail : sohyun.kiiim@gmail.com</p>
-            <p>★ phone : 010 - 3936 - 3405</p>
+            <div class="root">
+              <p>★ e-mail : sohyun.kiiim@gmail.com</p>
+              <p>★ phone : 010 - 3936 - 3405</p>
+            </div>
             <div class="img">
               <img src="./img/contact_bg.jpg" alt="배경이미지" />
             </div>
+            <div class="link">
+              <a href="#">( Velog )</a>
+              <a href="#">( Github )</a>
+            </div>
+            <span>&copy; SohyunKim. 2025. All Right Reserved.</span>
           </div>
         </div>
       </section>
     </div>
     <script src="./js/main.js"></script>
+    <script src="./js/GSAP.js"></script>
   </body>
 </html>
