@@ -1,0 +1,437 @@
+@charset "utf-8";
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Anton&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif, "Abhaya Libre", serif,
+    "Anton", sans-serif;
+  font-size: 1.2rem;
+  background-color: #111;
+  color: #fff;
+}
+:is(body .container, section) {
+  width: 100%;
+}
+.con {
+  width: 100%;
+  height: 100%;
+}
+section {
+  height: 100vh;
+}
+/* 스크롤 디자인 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/* 메인 비주얼 1 🍅🍅 */
+.visual1 {
+  background-color: #801a1a;
+  z-index: -2;
+  display: flex;
+  align-items: center;
+}
+.visual1 .con {
+  height: 80%;
+  background-color: aliceblue;
+  position: relative;
+}
+.visual1 .bg_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.visual1 .bg_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+.visual1 h2 {
+  width: 100%;
+  font-family: "Abhaya Libre";
+  text-align: center;
+  font-size: 8rem;
+  color: #e4bb4a;
+  line-height: 1.2;
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+}
+.visual1 h2 .mob {
+  display: none;
+}
+.visual1 p {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-family: "굴림", Gulim;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #eeeeee;
+  position: absolute;
+  bottom: 1.6rem;
+  z-index: 1;
+}
+/* 메인 비주얼 2 🍅🍅 */
+.visual2 .con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.visual2 .con img {
+  width: 60%;
+  height: auto;
+  filter: brightness(0.6);
+}
+.visual2 .con .text {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+}
+.visual2 .con .text p {
+  font-family: "Abhaya Libre";
+  font-size: 8rem;
+  font-weight: 600;
+}
+/* introduce 🍅🍅 */
+.introduce .con {
+  position: relative;
+}
+.introduce .card_wrap {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem;
+  position: absolute;
+  left: 5%;
+}
+.card_wrap > div {
+  width: 30%;
+  height: 95%;
+  background-color: aliceblue;
+}
+.card1 {
+  padding: 1.5rem;
+}
+:is(.card2, .card3) {
+  padding: 3rem 1.6rem;
+}
+.card_wrap > div .card_con {
+  width: 100%;
+  height: 100%;
+}
+.card_wrap .card1 {
+  background-color: #aa4242;
+}
+.card_wrap .card2 {
+  background-image: linear-gradient(#c7c7c7 60%, rgba(18, 80, 206, 0.9));
+}
+.card_wrap .card3 {
+  background-color: #aaedaa;
+}
+.card1 .card_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card1 .card_con .text {
+  width: 100%;
+}
+.card_con .text div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card1 .text span {
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.card1 img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0.8);
+}
+.card_wrap .card_title {
+  font-family: "Abhaya Libre";
+  font-size: 6.2rem;
+  line-height: 1;
+  color: #1250ce;
+  margin-bottom: 1rem;
+}
+.card2 p {
+  width: 95%;
+  margin: 0 auto;
+  color: #1250ce;
+  line-height: 2;
+}
+.card2 .card_con {
+  border-bottom: 4px solid #c7c7c7;
+}
+.card3 .card_con {
+  border-bottom: 4px solid #1250ce;
+}
+.card3 .card_con .skill {
+  width: 95%;
+  margin: 0 auto;
+  font-family: "Abhaya Libre";
+  color: #1250ce;
+  margin-bottom: 1.5rem;
+}
+.card3 .skill h4 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.card_con .skill_title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.skill_title .line {
+  flex-grow: 1; /* 선이 남은 공간을 자동으로 채움 */
+  height: 2px; /* 선의 두께 */
+  background-color: #1250ce; /* 선 색상 */
+  margin-left: 10px; /* 텍스트와 선 사이 여백 */
+}
+.card3 .skill ul {
+  width: 100%;
+  padding-left: 2rem;
+}
+.card3 .skill ul li {
+  font-size: 1.5rem;
+  list-style: disc;
+}
+/* 메뉴 */
+.introduce .menu_tab {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+}
+.menu_tab > div {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+.menu_tab > div a {
+  font-family: "Abhaya Libre";
+  font-size: 1.4rem;
+  color: #eeeeee;
+}
+.menu_tab > div .circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+}
+.menu1 .circle {
+  background-color: #c8000a;
+}
+.menu2 .circle {
+  background-color: #29a5fe;
+}
+.menu3 .circle {
+  background-color: #91ea91;
+}
+/* work 🍅🍅 */
+.work .con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.work .work_box {
+  width: 65%;
+  height: 800px;
+  position: relative;
+}
+.work_box .book {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+}
+.work .book .left {
+  display: block;
+  width: 50%;
+  height: 100%;
+  padding: 6%;
+  border-radius: 10px 0 0 10px;
+}
+.book .left img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0.7);
+  margin: 0 auto;
+}
+.work .book .right {
+  display: block;
+  width: 50%;
+  height: 100%;
+  padding: 4%;
+  color: #111;
+  border-radius: 0 10px 10px 0;
+  background-image: linear-gradient(to right, #cccccc, #dddddd 3%, #eeeeee 10%);
+}
+.work_box .work1 .left {
+  background-color: #ce3276;
+}
+.work_box .work2 .left {
+  background-color: #b1b1b1;
+}
+.work_box .work3 .left {
+  background-color: #cf612b;
+}
+.work_box .work4 .left {
+  background-color: #2874ca;
+}
+.book .left img {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.work1 .left img {
+  width: 70%;
+}
+.right .right_con {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+:is(.work1, .work2, .work3, .work4) .work_title {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.work_box .work1 {
+  z-index: 1;
+}
+.work_box .work2 {
+  z-index: 2;
+}
+.work_box .work3 {
+  z-index: 3;
+}
+.work_box .work4 {
+  z-index: 4;
+}
+.work_box .work1 .work_title {
+  font-family: "Abhaya Libre";
+  color: #ce3276;
+}
+.work_box .work2 .work_title {
+  font-family: "Abhaya Libre";
+  color: #b1b1b1;
+}
+.work_box .work3 .work_title {
+  font-family: "Anton";
+  color: #cf612b;
+}
+.work_box .work4 .work_title {
+  font-family: "Anton";
+  color: #2874ca;
+}
+.right_con .lang {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  margin-bottom: 3rem;
+}
+.right_con .lang p {
+  width: 5rem;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.2;
+  padding: 0.4rem;
+  border: 1px solid #111;
+  border-radius: 100%;
+}
+.right_con ul {
+  width: 100%;
+  padding-left: 4rem;
+  margin-bottom: 4rem;
+}
+.right_con ul li {
+  width: 100%;
+  list-style: disc;
+  font-size: 1.1rem;
+}
+.right_con > p {
+  width: 100%;
+  font-size: 1.1rem;
+  padding-left: 2rem;
+}
+.right_con > span {
+  font-family: "Abhaya Libre";
+  font-size: 2.4rem;
+  margin-top: auto;
+}
+.book .index {
+  display: block;
+  width: 50px;
+  height: 140px;
+  border-radius: 6px;
+  position: absolute;
+  left: -40px;
+}
+.work1 .index {
+  top: 0;
+  background-color: #ce3276;
+}
+.work2 .index {
+  top: 25%;
+  background-color: #b1b1b1;
+}
+.work3 .index {
+  top: 50%;
+  background-color: #cf612b;
+}
+.work4 .index {
+  top: 75%;
+  background-color: #2874ca;
+}
+
+.work2 .left img {
+  width: 75%;
+  filter: brightness(0.8);
+}
+.work3 .left img {
+  width: 80%;
+}
+.work4 .left img {
+  filter: brightness(0.8);
+  width: 85%;
+}
+/* contact 🍅🍅 */
+.contact {
+  background-color: #801a1a;
+}
+.contact .con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .info {
+  width: 70%;
+  height: 800px;
+}
