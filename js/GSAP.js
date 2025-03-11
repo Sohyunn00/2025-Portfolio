@@ -63,26 +63,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .timeline({
       scrollTrigger: {
         trigger: ".introduce",
-        start: "top 10%", // 요소가 화면 아래쪽 80% 지점에서 시작
-        end: "bottom top", // 요소가 화면 밖으로 나갈 때까지 애니메이션 적용
-        scrub: true, // 스크롤에 따라 부드럽게 진행
-        pin: true, // 화면 고정 없이 자연스럽게 이동
-        markers: true, // 디버깅용 (완성 후 삭제 가능)
+        start: "top 10%",
+        end: "bottom top",
+        endTrigger: ".visual2",
+        scrub: true,
+        pin: true,
       },
     })
     .fromTo(
       ".card1",
       { y: -600, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+      { y: -100, opacity: 1, duration: 1, ease: "power2.out" }
     )
     .fromTo(
       ".card2",
       { y: -600, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+      { y: -100, opacity: 1, duration: 1, ease: "power2.out" }
     )
     .fromTo(
       ".card3",
       { y: -600, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+      { y: -100, opacity: 1, duration: 1, ease: "power2.out" }
     );
 });
