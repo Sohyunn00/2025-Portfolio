@@ -3,16 +3,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // 🥦🥦 인트로 빨간 박스 올라감
   gsap
-    .timeline({ delay: 1 })
+    .timeline({ delay: 0.8 })
     .to(".blind_top", { height: "0" })
-    .to(".blind_bottom", { height: "0" }, "<");
+    .to(".blind_bottom", { height: "0" }, "<")
+    .to(".img_box h2", { y: 0, opacity: 1, duration: 2 });
 
   // 🥦🥦 메뉴 탭 나타내기
   gsap
     .timeline({
       scrollTrigger: {
         trigger: ".introduce",
-        start: "-300px, 0%",
+        start: "0%, 0%",
         end: "100%, 100%",
         scrub: true,
       },
@@ -59,30 +60,99 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .to(".menu2 a", { color: "#eeeeee", fontWeight: "300" })
     .to(".menu3 a", { color: "#91ea91", fontWeight: "800" });
 
+  // 🥦🥦 introduce 카드 올라옴
   gsap
     .timeline({
       scrollTrigger: {
         trigger: ".introduce",
-        start: "top 10%",
-        end: "bottom top",
+        start: "top top",
+        end: "-10% bottom",
         endTrigger: ".visual2",
         scrub: true,
-        pin: true,
       },
     })
     .fromTo(
       ".card1",
-      { y: -600, opacity: 0 },
-      { y: -100, opacity: 1, duration: 1, ease: "power2.out" }
+      { y: -500, opacity: 0 },
+      { y: 0, opacity: 1, ease: "power2.out" }
     )
     .fromTo(
       ".card2",
-      { y: -600, opacity: 0 },
-      { y: -100, opacity: 1, duration: 1, ease: "power2.out" }
+      { y: -500, opacity: 0 },
+      { y: 0, opacity: 1, ease: "power2.out" }
     )
     .fromTo(
       ".card3",
-      { y: -600, opacity: 0 },
-      { y: -100, opacity: 1, duration: 1, ease: "power2.out" }
+      { y: -500, opacity: 0 },
+      { y: 0, opacity: 1, ease: "power2.out" }
     );
+
+  // 🥦🥦 visual2 텍스트 애니메이션
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".visual2",
+        start: "0% 0%",
+        end: "100% 100%",
+        scrub: true,
+      },
+    })
+    .to(".text1 span:nth-child(1)", { y: 0, opacity: 1 })
+    .to(".text2 span:nth-child(8)", { y: 0, opacity: 1 }, "<")
+    .to(".text1 span:nth-child(2)", { y: 0, opacity: 1 })
+    .to(".text2 span:nth-child(7)", { y: 0, opacity: 1 }, "<")
+    .to(".text1 span:nth-child(3)", { y: 0, opacity: 1 })
+    .to(".text2 span:nth-child(6)", { y: 0, opacity: 1 }, "<")
+    .to(".text1 span:nth-child(4)", { y: 0, opacity: 1 })
+    .to(".text2 span:nth-child(5)", { y: 0, opacity: 1 }, "<")
+    .to(".text1 span:nth-child(5)", { y: 0, opacity: 1 })
+    .to(".text2 span:nth-child(4)", { y: 0, opacity: 1 }, "<")
+    .to(".text1 span:nth-child(6)", { y: 0, opacity: 1 })
+    .to(".text2 span:nth-child(3)", { y: 0, opacity: 1 }, "<")
+    .to(".text1 span:nth-child(7)", { y: 0, opacity: 1 })
+    .to(".text2 span:nth-child(2)", { y: 0, opacity: 1 }, "<")
+    .to(".text1 span:nth-child(8)", { y: 0, opacity: 1 })
+    .to(".text2 span:nth-child(1)", { y: 0, opacity: 1 }, "<")
+    //
+    .to(".text3 span:nth-child(1)", { y: 0, opacity: 1 })
+    .to(".text4 span:nth-child(6)", { y: 0, opacity: 1 }, "<")
+    .to(".text3 span:nth-child(2)", { y: 0, opacity: 1 })
+    .to(".text4 span:nth-child(5)", { y: 0, opacity: 1 }, "<")
+    .to(".text3 span:nth-child(3)", { y: 0, opacity: 1 })
+    .to(".text4 span:nth-child(4)", { y: 0, opacity: 1 }, "<")
+    .to(".text3 span:nth-child(4)", { y: 0, opacity: 1 })
+    .to(".text4 span:nth-child(3)", { y: 0, opacity: 1 }, "<")
+    .to(".text3 span:nth-child(5)", { y: 0, opacity: 1 })
+    .to(".text4 span:nth-child(2)", { y: 0, opacity: 1 }, "<")
+    .to(".text3 span:nth-child(6)", { y: 0, opacity: 1 })
+    .to(".text4 span:nth-child(1)", { y: 0, opacity: 1 }, "<")
+    .to(".text3 span:nth-child(7)", { y: 0, opacity: 1 })
+    //
+    .to(".visual2 .text", {
+      transform: "rotate(-45deg) scale(2)",
+      duration: 2,
+    })
+    //
+    .to(".visual2 img", { opacity: 0, duration: 2 }, "<")
+    .to(".text1", { x: "-80vw", duration: 4 })
+    .to(".text2", { x: "80vw", duration: 4 }, "<")
+    .to(".text3", { x: "-80vw", duration: 4 }, "<")
+    .to(".text4", { x: "80vw", duration: 4 }, "<");
+
+  // 🥦🥦 work 올라옴
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".work",
+        start: "5% 0%",
+        end: "95% 100%",
+        scrub: true,
+        duration: 3,
+        ease: "power3.out",
+        markers: true,
+      },
+    })
+    .to(".work2", { y: 0, display: "flex" })
+    .to(".work3", { y: 0, display: "flex" })
+    .to(".work4", { y: 0, display: "flex" });
 });
