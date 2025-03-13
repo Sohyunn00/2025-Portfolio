@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrollTrigger: {
         trigger: ".introduce",
         start: "0%, 0%",
-        end: "100%, 100%",
+        end: "10%, 100%",
         scrub: true,
       },
     })
@@ -28,24 +28,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "-300px, 0%",
         end: "100%, 100%",
         scrub: true,
+        markers: true,
       },
     })
     .to(".menu1 a", { color: "#c8000a", fontWeight: "800" })
-    .to(".menu2 a", { color: "#eeeeee", fontWeight: "300" })
-    .to(".menu3 a", { color: "#eeeeee", fontWeight: "300" });
+    .to(".menu2 a", { color: "#eeeeee" })
+    .to(".menu3 a", { color: "#eeeeee" });
 
   gsap
     .timeline({
       scrollTrigger: {
         trigger: ".work",
-        start: "0% 0%",
-        end: "100%, 100%",
+        start: "-300px, 0%",
+        end: "5%, 100%",
         scrub: true,
       },
     })
-    .to(".menu1 a", { color: "#eeeeee", fontWeight: "300" })
+    .to(".menu1 a", { color: "#eeeeee" })
     .to(".menu2 a", { color: "#29a5fe", fontWeight: "800" })
-    .to(".menu3 a", { color: "#eeeeee", fontWeight: "300" });
+    .to(".menu3 a", { color: "#eeeeee" });
 
   gsap
     .timeline({
@@ -56,36 +57,56 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrub: true,
       },
     })
-    .to(".menu1 a", { color: "#eeeeee", fontWeight: "300" })
-    .to(".menu2 a", { color: "#eeeeee", fontWeight: "300" })
+    .to(".menu1 a", { color: "#eeeeee" })
+    .to(".menu2 a", { color: "#eeeeee" })
     .to(".menu3 a", { color: "#91ea91", fontWeight: "800" });
 
-  // 🥦🥦 introduce 카드 올라옴
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".introduce",
-        start: "top top",
-        end: "-10% bottom",
-        endTrigger: ".visual2",
-        scrub: true,
-      },
-    })
-    .fromTo(
-      ".card1",
-      { y: -500, opacity: 0 },
-      { y: 0, opacity: 1, ease: "power2.out" }
-    )
-    .fromTo(
-      ".card2",
-      { y: -500, opacity: 0 },
-      { y: 0, opacity: 1, ease: "power2.out" }
-    )
-    .fromTo(
-      ".card3",
-      { y: -500, opacity: 0 },
-      { y: 0, opacity: 1, ease: "power2.out" }
-    );
+  ScrollTrigger.matchMedia({
+    "(min-width: 769px)": function () {
+      // 🥦🥦 introduce 카드 올라옴
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".introduce",
+            start: "top top",
+            end: "-10% bottom",
+            endTrigger: ".visual2",
+            scrub: true,
+          },
+        })
+        .fromTo(
+          ".card1",
+          { y: -500, opacity: 0 },
+          { y: 0, opacity: 1, ease: "power2.out" }
+        )
+        .fromTo(
+          ".card2",
+          { y: -500, opacity: 0 },
+          { y: 0, opacity: 1, ease: "power2.out" }
+        )
+        .fromTo(
+          ".card3",
+          { y: -500, opacity: 0 },
+          { y: 0, opacity: 1, ease: "power2.out" }
+        );
+
+      // 🥦🥦 work 올라옴
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".work",
+            start: "5% 0%",
+            end: "95% 100%",
+            scrub: true,
+            duration: 3,
+            ease: "power3.out",
+          },
+        })
+        .to(".work2", { y: 0, display: "flex" })
+        .to(".work3", { y: 0, display: "flex" })
+        .to(".work4", { y: 0, display: "flex" });
+    },
+  });
 
   // 🥦🥦 visual2 텍스트 애니메이션
   gsap
@@ -95,6 +116,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "0% 0%",
         end: "100% 100%",
         scrub: true,
+        duration: 2,
       },
     })
     .to(".text1 span:nth-child(1)", { y: 0, opacity: 1 })
@@ -130,29 +152,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //
     .to(".visual2 .text", {
       transform: "rotate(-45deg) scale(2)",
-      duration: 2,
+      duration: 3,
     })
     //
-    .to(".visual2 img", { opacity: 0, duration: 2 }, "<")
+    .to(".visual2 img", { opacity: 0, duration: 4 }, "<")
     .to(".text1", { x: "-80vw", duration: 4 })
     .to(".text2", { x: "80vw", duration: 4 }, "<")
     .to(".text3", { x: "-80vw", duration: 4 }, "<")
     .to(".text4", { x: "80vw", duration: 4 }, "<");
-
-  // 🥦🥦 work 올라옴
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".work",
-        start: "5% 0%",
-        end: "95% 100%",
-        scrub: true,
-        duration: 3,
-        ease: "power3.out",
-        markers: true,
-      },
-    })
-    .to(".work2", { y: 0, display: "flex" })
-    .to(".work3", { y: 0, display: "flex" })
-    .to(".work4", { y: 0, display: "flex" });
 });

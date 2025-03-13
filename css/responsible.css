@@ -6,15 +6,14 @@
   }
   /* 메인비주얼 2 */
   .visual2 .con .text p {
-    font-size: 7rem;
+    font-size: 9rem;
   }
   /* introduce 🍅🍅 */
   .introduce .card_wrap {
-    padding: 8rem 4rem;
+    padding: 4rem;
   }
   .card_wrap > div {
     width: 30%;
-    height: 700px;
   }
   :is(.card2, .card3) {
     padding: 2rem 1.4rem;
@@ -28,7 +27,6 @@
   /* work 🍅🍅 */
   .work .work_box {
     width: 65%;
-    height: 700px;
   }
   .book .right br {
     display: none;
@@ -69,6 +67,7 @@
   .visual1 h2 {
     font-size: 5rem;
     line-height: 1.4;
+    top: 25%;
   }
   .visual1 h2 .mob {
     display: block;
@@ -78,17 +77,16 @@
   }
   /* 메인 비주얼 2 */
   .visual2 .con .text p {
-    font-size: 6rem;
+    font-size: 8rem;
   }
   /* introduce 🍅🍅 */
   .introduce .card_wrap {
     width: 100%;
-    padding: 8rem 3rem;
+    padding: 4rem;
     left: 0;
   }
   .card_wrap > div {
     width: 31%;
-    height: 660px;
   }
   :is(.card2, .card3) {
     padding: 2rem 1.2rem;
@@ -111,7 +109,9 @@
   /* work 🍅🍅 */
   .work .work_box {
     width: 85%;
-    height: 700px;
+  }
+  .work_box .book {
+    height: 75%;
   }
   .book .right br {
     display: none;
@@ -171,15 +171,33 @@
     height: 75%;
   }
   .contact h3 {
-    font-size: 11rem;
+    font-size: 10rem;
     left: -4rem;
+    line-height: 0.9;
+  }
+  .info :is(p, a) {
+    font-size: 1.2rem;
+  }
+  .info p {
+    margin-bottom: 0.5rem;
+  }
+  .contact .info .route {
+    top: 40%;
+  }
+  .contact .info .link {
+    bottom: 8rem;
+    right: 8rem;
+  }
+  .contact .info > span {
+    font-size: 1rem;
   }
 }
 /* 태블릿 m 🥦🥦 */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   /* 메인비주얼 1 */
   .visual1 h2 {
-    font-size: 5rem;
+    font-size: 4.6rem;
+    top: 22%;
   }
   .visual1 h2 .mob {
     display: block;
@@ -194,38 +212,38 @@
   /* introduce 🍅🍅 */
   .introduce .card_wrap {
     width: 100%;
-    padding: 8rem 1.6rem;
+    padding: 2.4rem 1.6rem;
     left: 0;
   }
   .card_wrap > div {
     width: 32%;
-    height: 640px;
-  }
-  .card1 {
     padding: 1rem;
   }
-  :is(.card2, .card3) {
-    padding: 2rem 1rem;
-  }
   .card1 .text span {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .card1 .card_img {
+    height: 65%;
   }
   .card_wrap .card_title {
     font-size: 4.4rem;
+    margin-bottom: 0;
   }
   .card2 p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .card3 .skill h4 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+  .card_con .skill_title {
+    margin-bottom: 0.2rem;
   }
   .card3 .skill ul li {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
   /* work 🍅🍅 */
   .work .work_box {
     width: 90%;
-    height: 640px;
   }
   .book .right br {
     display: none;
@@ -257,7 +275,7 @@
   }
   .book .index {
     width: 40px;
-    height: 120px;
+    height: 100px;
     left: -20px;
   }
   :is(.work1, .work2, .work3, .work4) .work_title {
@@ -282,29 +300,47 @@
     height: 75%;
   }
   .contact h3 {
-    font-size: 9rem;
-    left: -3rem;
+    font-size: 8rem;
+    left: -2rem;
+    line-height: 0.9;
   }
   .info :is(p, a) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .info p {
+    margin-bottom: 0.2rem;
+  }
+  .contact .info .route {
+    top: 40%;
+  }
+  .contact .info .link {
+    bottom: 8rem;
+    right: 6rem;
+  }
+  .contact .info > span {
+    font-size: 0.8rem;
   }
 }
 /* 태블릿 s 🥦🥦 */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   /* 메인비주얼 1 */
   .visual1 h2 {
-    font-size: 4rem;
+    font-size: 3rem;
+    top: 22%;
     line-height: 1.2;
   }
   .visual1 h2 .mob {
     display: block;
   }
+  .visual1 .typing_box {
+    bottom: 0.2rem;
+  }
   .visual1 p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   /* 메인 비주얼 2 */
   .visual2 .con .text p {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   /* introduce 🍅🍅 */
   .introduce {
@@ -324,24 +360,31 @@
   }
   .card_wrap > div {
     width: 70%;
-    height: 500px;
+    height: 460px;
     margin: 0 auto;
   }
   .card1 .text span {
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 1.6rem;
+    line-height: 1.4;
   }
-  :is(.card2, .card3) {
-    padding: 1.4rem 1rem;
+  :is(.card1, .card2, .card3) {
+    padding: 1rem;
   }
   .card_wrap .card_title {
     font-size: 4rem;
+    margin-bottom: 0;
   }
   .card2 p {
     font-size: 1rem;
   }
+  .card3 .card_con .skill {
+    margin-bottom: 1rem;
+  }
+  .card_con .skill_title {
+    margin-bottom: 0;
+  }
   .card3 .skill h4 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   .card3 .skill ul li {
     font-size: 1.2rem;
@@ -353,14 +396,27 @@
     line-height: 1.2;
   }
   /* work 🍅🍅 */
+  .work {
+    height: fit-content;
+  }
+  .work .con {
+    height: 100%;
+  }
   .work .work_box {
     width: 80%;
-    height: 600px;
+    height: 100%;
+    position: static;
   }
   .work_box .book {
     width: 100%;
-    height: 100%;
-    display: block;
+    height: 600px;
+    flex-direction: column;
+    position: static;
+    margin-bottom: 10vw;
+  }
+  .work_box :is(.book:nth-child(2), .book:nth-child(3), .book:nth-child(4)) {
+    display: flex;
+    transform: translateY(0);
   }
   .book .index {
     display: none;
@@ -443,13 +499,13 @@
   }
   /* contact 🍅🍅 */
   .contact h3 {
-    font-size: 7.6rem;
+    font-size: 6rem;
     margin: 0 auto;
     left: -2rem;
     right: -2rem;
     text-align: center;
   }
-  .contact h3 .mob {
+  .contact .route .mob {
     display: block;
   }
   .contact .info .route {
@@ -458,24 +514,28 @@
   }
   .contact .info .link {
     top: 65%;
-    left: 1rem;
+    right: 1rem;
+    gap: 0.2rem;
+    text-align: end;
   }
   .info :is(p, a) {
-    font-size: 1.2rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.2;
   }
   .info p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.4rem;
   }
-  .contact .info span {
-    font-size: 0.9rem;
+  .contact .info > span {
+    bottom: 0.6rem;
+    right: 0.8rem;
+    font-size: 0.8rem;
   }
 }
 /* 모바일 🥦🥦 */
 @media screen and (max-width: 480px) {
   /* 메인비주얼 1 */
   .visual1 h2 {
-    font-size: 3rem;
+    font-size: 2.6rem;
     line-height: 1.2;
   }
   .visual1 h2 .mob {
@@ -553,14 +613,27 @@
     line-height: 1.2;
   }
   /* work 🍅🍅 */
+  .work {
+    height: fit-content;
+  }
+  .work .con {
+    height: 100%;
+  }
   .work .work_box {
     width: 85%;
-    height: 500px;
+    height: 100%;
+    position: static;
   }
   .work_box .book {
     width: 100%;
-    height: 100%;
-    display: block;
+    height: 500px;
+    flex-direction: column;
+    position: static;
+    margin-bottom: 10vw;
+  }
+  .work_box :is(.book:nth-child(2), .book:nth-child(3), .book:nth-child(4)) {
+    display: flex;
+    transform: translateY(0);
   }
   .book .index {
     display: none;
@@ -593,15 +666,6 @@
   .book .right br {
     display: none;
   }
-  /* .work_box .work2 {
-    display: none;
-  }
-  .work_box .work3 {
-    display: none;
-  }
-  .work_box .work4 {
-    display: none;
-  } */
   .book .left img {
     transform: rotate(90deg);
     width: 55%;

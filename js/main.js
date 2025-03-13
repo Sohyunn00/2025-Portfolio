@@ -34,18 +34,26 @@ function cusorNone() {
 }
 setTimeout(cusorNone, 7000);
 
-//마우스커스텀
+// 마우스커스텀 ------------------------------
 
 document.addEventListener("mousemove", (e) => {
-  gsap.to(".mouse", {
+  gsap.to(".cursor", {
+    x: e.clientX,
+    y: e.clientY,
+    // duration: 1,
+    scrub: 1,
+  });
+});
+
+document.addEventListener("mousemove", (e) => {
+  gsap.to(".work_cursor", {
     x: e.clientX + 70,
     y: e.clientY + 40,
-    //마우스 따라다니도록 하기
   });
 });
 
 $(".work .book").mouseover(function () {
-  gsap.to(".mouse", {
+  gsap.to(".work_cursor", {
     opacity: 1,
     scale: 1,
     duration: 0.3,
@@ -53,9 +61,27 @@ $(".work .book").mouseover(function () {
 });
 
 $(".work .book").mouseleave(function () {
-  gsap.to(".mouse", {
+  gsap.to(".work_cursor", {
     opacity: 0,
     scale: 0,
     duration: 0.3,
   });
 });
+
+// 네비게이션 버튼 클릭시 화면 이동 ------------------------------
+document.querySelector(".menu1").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".introduce").scrollIntoView({ behavior: "smooth" });
+});
+document.querySelector(".menu2").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".work").scrollIntoView({ behavior: "smooth" });
+});
+document.querySelector(".menu3").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".contact").scrollIntoView({ behavior: "smooth" });
+});
+
+let box = document.querySelector(".sticky_box");
+
+$(".sticky_box").css("height", box.offsetHeight + "px");
