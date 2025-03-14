@@ -14,6 +14,7 @@
   }
   .card_wrap > div {
     width: 30%;
+    height: 80%;
   }
   :is(.card2, .card3) {
     padding: 2rem 1.4rem;
@@ -86,7 +87,8 @@
     left: 0;
   }
   .card_wrap > div {
-    width: 31%;
+    width: 30%;
+    height: 80%;
   }
   :is(.card2, .card3) {
     padding: 2rem 1.2rem;
@@ -197,7 +199,7 @@
   /* 메인비주얼 1 */
   .visual1 h2 {
     font-size: 4.6rem;
-    top: 22%;
+    top: 20vh;
   }
   .visual1 h2 .mob {
     display: block;
@@ -207,16 +209,17 @@
   }
   /* 메인 비주얼 2 */
   .visual2 .con .text p {
-    font-size: 6rem;
+    font-size: 7rem;
   }
   /* introduce 🍅🍅 */
   .introduce .card_wrap {
     width: 100%;
-    padding: 2.4rem 1.6rem;
+    padding: 2.4rem 2rem;
     left: 0;
   }
   .card_wrap > div {
     width: 32%;
+    height: 65%;
     padding: 1rem;
   }
   .card1 .text span {
@@ -247,6 +250,9 @@
   }
   .book .right br {
     display: none;
+  }
+  .work_box .book {
+    height: 60%;
   }
   .work .book .left {
     padding: 10% 6%;
@@ -325,22 +331,22 @@
 @media screen and (min-width: 481px) and (max-width: 768px) {
   /* 메인비주얼 1 */
   .visual1 h2 {
-    font-size: 3rem;
-    top: 22%;
+    font-size: clamp(9vw, 4rem, 10vw);
+    top: 25vh;
     line-height: 1.2;
   }
   .visual1 h2 .mob {
     display: block;
   }
   .visual1 .typing_box {
-    bottom: 0.2rem;
+    bottom: 0.6rem;
   }
   .visual1 p {
     font-size: 1rem;
   }
   /* 메인 비주얼 2 */
   .visual2 .con .text p {
-    font-size: 4rem;
+    font-size: 7rem;
   }
   /* introduce 🍅🍅 */
   .introduce {
@@ -359,7 +365,7 @@
     position: static;
   }
   .card_wrap > div {
-    width: 70%;
+    width: 300px;
     height: 460px;
     margin: 0 auto;
   }
@@ -403,7 +409,7 @@
     height: 100%;
   }
   .work .work_box {
-    width: 80%;
+    width: 70%;
     height: 100%;
     position: static;
   }
@@ -498,8 +504,11 @@
     display: none;
   }
   /* contact 🍅🍅 */
+  .contact {
+    height: 600px;
+  }
   .contact h3 {
-    font-size: 6rem;
+    font-size: 7rem;
     margin: 0 auto;
     left: -2rem;
     right: -2rem;
@@ -535,7 +544,7 @@
 @media screen and (max-width: 480px) {
   /* 메인비주얼 1 */
   .visual1 h2 {
-    font-size: 2.6rem;
+    font-size: clamp(9vw, 4rem, 11vw);
     line-height: 1.2;
   }
   .visual1 h2 .mob {
@@ -549,7 +558,7 @@
   }
   /* 메인 비주얼 2 */
   .visual2 .con .text p {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   /* introduce 🍅🍅 */
   .introduce {
@@ -568,7 +577,7 @@
     position: static;
   }
   .card_wrap > div {
-    width: 80%;
+    width: 70%;
     height: 460px;
     margin: 0 auto;
   }
@@ -705,6 +714,9 @@
     display: none;
   }
   /* contact 🍅🍅 */
+  .contact {
+    height: 400px;
+  }
   .contact h3 {
     font-size: 5rem;
     margin: 0 auto;
@@ -716,21 +728,20 @@
     display: block;
   }
   .contact .info .route {
-    top: 35%;
+    top: 30%;
     left: 0.4rem;
   }
   .contact .info .link {
     width: 100%;
     height: fit-content;
-    top: 65%;
+    top: 60%;
     left: 0.4rem;
+    gap: 0;
   }
   .info :is(p, a) {
     font-size: 1rem;
     line-height: 1.5;
-  }
-  .info p {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
   .contact .info span {
     font-size: 0.8rem;

@@ -28,12 +28,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "-300px, 0%",
         end: "100%, 100%",
         scrub: true,
-        markers: true,
       },
     })
     .to(".menu1 a", { color: "#c8000a", fontWeight: "800" })
-    .to(".menu2 a", { color: "#eeeeee" })
-    .to(".menu3 a", { color: "#eeeeee" });
+    .to(".menu2 a", { color: "" })
+    .to(".menu3 a", { color: "" });
 
   gsap
     .timeline({
@@ -44,9 +43,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrub: true,
       },
     })
-    .to(".menu1 a", { color: "#eeeeee" })
+    .to(".menu1 a", { color: "" })
     .to(".menu2 a", { color: "#29a5fe", fontWeight: "800" })
-    .to(".menu3 a", { color: "#eeeeee" });
+    .to(".menu3 a", { color: "" });
 
   gsap
     .timeline({
@@ -57,8 +56,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrub: true,
       },
     })
-    .to(".menu1 a", { color: "#eeeeee" })
-    .to(".menu2 a", { color: "#eeeeee" })
+    .to(".menu1 a", { color: "" })
+    .to(".menu2 a", { color: "" })
     .to(".menu3 a", { color: "#91ea91", fontWeight: "800" });
 
   ScrollTrigger.matchMedia({

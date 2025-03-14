@@ -103,7 +103,6 @@ section {
   color: #eeeeee;
   font-weight: 300;
 }
-
 @keyframes blink {
   from {
     opacity: 1;
@@ -272,7 +271,7 @@ section {
 .menu_tab > div a {
   font-family: "Abhaya Libre";
   font-size: 1.4rem;
-  color: #eeeeee;
+  color: #999;
   font-weight: 600;
 }
 .menu_tab > div .circle {
