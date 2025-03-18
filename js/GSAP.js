@@ -8,6 +8,39 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .to(".blind_bottom", { height: "0" }, "<")
     .to(".img_box h2", { y: 0, opacity: 1, duration: 2 });
 
+  // 마우스커스텀 ------------------------------
+
+  document.addEventListener("mousemove", (e) => {
+    gsap.to(".cursor", {
+      x: e.clientX,
+      y: e.clientY,
+      duration: 0.5,
+    });
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    gsap.to(".work_cursor", {
+      x: e.clientX + 70,
+      y: e.clientY + 40,
+    });
+  });
+
+  $(".work .book").mouseover(function () {
+    gsap.to(".work_cursor", {
+      opacity: 1,
+      scale: 1,
+      duration: 0.3,
+    });
+  });
+
+  $(".work .book").mouseleave(function () {
+    gsap.to(".work_cursor", {
+      opacity: 0,
+      scale: 0,
+      duration: 0.3,
+    });
+  });
+
   // 🥦🥦 메뉴 탭 나타내기
   gsap
     .timeline({
@@ -115,7 +148,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "0% 0%",
         end: "100% 100%",
         scrub: true,
-        duration: 2,
+        duration: 5,
       },
     })
     .to(".text1 span:nth-child(1)", { y: 0, opacity: 1 })
@@ -155,7 +188,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
     //
     .to(".visual2 img", { opacity: 0, duration: 4 }, "<")
-    .to(".text1", { x: "-80vw", duration: 4 })
+    .to(".text1", { x: "-80vw", duration: 4 }, "+=1")
     .to(".text2", { x: "80vw", duration: 4 }, "<")
     .to(".text3", { x: "-80vw", duration: 4 }, "<")
     .to(".text4", { x: "80vw", duration: 4 }, "<");
