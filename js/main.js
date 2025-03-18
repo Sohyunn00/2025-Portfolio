@@ -28,17 +28,16 @@ let i = 0;
 function typing() {
   if (i < content.length) {
     text.innerHTML += content[i++];
-    setTimeout(typing, 140); // 다음 글자 출력
+    setTimeout(typing, 160); // 다음 글자 출력
   }
-  cursor.style.display = "none";
 }
 setTimeout(typing, 3500);
 
 // 타이핑 커서 숨기기
-function cusorNone() {
+function cursorNone() {
   cursor.style.visibility = "hidden";
 }
-setTimeout(cusorNone, 7000);
+setTimeout(cursorNone, 9000);
 
 // 네비게이션 버튼 클릭시 화면 이동 ------------------------------
 document.querySelector(".menu1").addEventListener("click", (e) => {
