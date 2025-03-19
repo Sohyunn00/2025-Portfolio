@@ -28,7 +28,7 @@ let i = 0;
 function typing() {
   if (i < content.length) {
     text.innerHTML += content[i++];
-    setTimeout(typing, 160); // 다음 글자 출력
+    setTimeout(typing, 150); // 다음 글자 출력
   }
 }
 setTimeout(typing, 3500);
