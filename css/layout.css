@@ -150,7 +150,7 @@ section {
 }
 .card_wrap > div {
   width: 30%;
-  height: 700px;
+  height: 720px;
   transform-origin: top;
 }
 .card1 {
@@ -272,7 +272,7 @@ section {
 }
 .menu_tab > div a {
   font-family: "Abhaya Libre";
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #999;
   font-weight: 600;
 }
