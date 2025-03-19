@@ -188,8 +188,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
     //
     .to(".visual2 img", { opacity: 0, duration: 4 }, "<")
-    .to(".text1", { x: "-80vw", duration: 4 }, "+=1")
-    .to(".text2", { x: "80vw", duration: 4 }, "<")
-    .to(".text3", { x: "-80vw", duration: 4 }, "<")
-    .to(".text4", { x: "80vw", duration: 4 }, "<");
+    .to(".text1", { x: "90vw", duration: 4 }, "+=1")
+    .to(".text2", { x: "90vw", duration: 4 }, "<")
+    .to(".text3", { x: "-90vw", duration: 4 }, "<")
+    .to(".text4", { x: "90vw", duration: 4 }, "<");
 });
