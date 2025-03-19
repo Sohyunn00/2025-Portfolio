@@ -228,11 +228,12 @@ section {
   margin: 0 auto;
   font-family: "Abhaya Libre";
   color: #1250ce;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .card3 .skill h4 {
   font-size: 2.4rem;
   font-weight: 600;
+  line-height: 1;
 }
 .card_con .skill_title {
   display: flex;
