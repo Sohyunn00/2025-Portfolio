@@ -10,30 +10,40 @@
   }
   /* introduce 🍅🍅 */
   .introduce .card_wrap {
-    padding: 4rem;
+    padding: 2rem 4rem;
   }
   .card_wrap > div {
     width: 30%;
-    height: 80%;
+    height: 640px;
   }
   :is(.card2, .card3) {
-    padding: 2rem 1.4rem;
+    padding: 1.4rem;
   }
   .card1 .text span {
     font-size: 2.2rem;
   }
   .card_wrap .card_title {
     font-size: 5.4rem;
+    margin-bottom: 0;
   }
   /* work 🍅🍅 */
+  .work .con {
+    padding: 8% 0;
+  }
   .work .work_box {
     width: 65%;
+  }
+  .work .book .right {
+    padding: 2%;
   }
   .book .right br {
     display: none;
   }
+  .work .book {
+    height: 600px;
+  }
   .work .book .left {
-    padding: 8% 6%;
+    padding: 4%;
   }
   .right_con .lang {
     gap: 1%;
@@ -46,7 +56,10 @@
   }
   .right_con ul {
     padding-left: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+  }
+  .right_con > p {
+    padding-left: 1rem;
   }
   .work1 .left img {
     width: 80%;
@@ -54,12 +67,19 @@
   .work2 .left img {
     width: 80%;
   }
+  .right_con > span {
+    font-size: 2rem;
+  }
   /* contact 🍅🍅 */
   .contact .info {
     height: 80%;
   }
   .contact h3 {
     font-size: 11rem;
+  }
+  .contact .info .link {
+    bottom: 8rem;
+    right: 14rem;
   }
 }
 /* 노트북 s 🥦🥦 */
@@ -83,13 +103,13 @@
   /* introduce 🍅🍅 */
   .introduce .card_wrap {
     width: 100%;
-    padding: 4rem 2rem;
+    padding: 2rem;
     left: 0;
     justify-content: space-evenly;
   }
   .card_wrap > div {
     width: 28%;
-    height: 80%;
+    height: 620px;
   }
   .card1 .card_img {
     height: 65%;
@@ -102,6 +122,7 @@
   }
   .card_wrap .card_title {
     font-size: 4.6rem;
+    margin-bottom: 0;
   }
   .card2 p {
     font-size: 1.2rem;
@@ -119,20 +140,23 @@
     font-size: 1.4rem;
   }
   /* work 🍅🍅 */
+  .work .con {
+    padding: 8% 0;
+  }
   .work .work_box {
     width: 85%;
   }
   .work_box .book {
-    height: 75%;
+    height: 600px;
   }
   .book .right br {
     display: none;
   }
   .work .book .left {
-    padding: 10% 6%;
+    padding: 4%;
   }
-  .work4 .left img {
-    width: 90%;
+  .work .book .right {
+    padding: 4%;
   }
   .right_con .lang {
     gap: 1%;
@@ -167,16 +191,16 @@
     padding-left: 1rem;
   }
   .work1 .left img {
-    width: 80%;
+    width: 60%;
   }
   .work2 .left img {
-    width: 80%;
+    width: 65%;
   }
   .work3 .left img {
-    width: 85%;
+    width: 70%;
   }
   .work4 .left img {
-    width: 90%;
+    width: 80%;
   }
   /* contact 🍅🍅 */
   .contact .info {
